@@ -4,19 +4,28 @@
   "version": "1.0.0",
   "description": "A tool for analyzing colors and fonts on any webpage",
   "permissions": [
-  "activeTab", 
-  "storage", 
-  "scripting", 
-  "tabs", 
-  "tabCapture"
+    "activeTab", 
+    "storage", 
+    "scripting", 
+    "tabs", 
+    "tabCapture"
   ],
-
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "content_scripts": [
     {
