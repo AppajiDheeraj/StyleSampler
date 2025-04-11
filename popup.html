@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Web Inspector</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Web Inspector</h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="moon">🌙</span>
+      </button>
+    </header>
+
+    <div class="tabs">
+      <button id="colors-tab" class="tab-btn">Colors</button>
+      <button id="fonts-tab" class="tab-btn">Fonts</button>
+    </div>
+
+    <button id="activate-tool" class="action-btn">Activate Color Picker</button>
+
+    <div class="separator"></div>
+
+    <div id="color-history-container" class="history-container">
+      <h2>Color History</h2>
+      <ul id="color-history" class="history-list">
+        <!-- Color history items will be inserted here -->
+      </ul>
+    </div>
+    
+    <div id="font-history-container" class="history-container" style="display: none;">
+      <h2>Font History</h2>
+      <ul id="font-history" class="history-list">
+        <!-- Font history items will be inserted here -->
+      </ul>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

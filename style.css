@@ -1,0 +1,218 @@
+:root {
+  --primary-color: #4169e1;
+  --primary-hover: #3155c8;
+  --text-color: #333;
+  --bg-color: #f5f5f5;
+  --tab-bg: #f0f0f0;
+  --active-tab-bg: #fff;
+  --card-bg: #fff;
+  --border-color: #e0e0e0;
+}
+
+.dark-theme {
+  --primary-color: #5d5fef;
+  --primary-hover: #4a4cbd;
+  --text-color: #f5f5f5;
+  --bg-color: #111827;
+  --tab-bg: #1f2937;
+  --active-tab-bg: #111827;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 280px;
+  transition: all 0.3s ease;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  background-color: var(--tab-bg);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* soft shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+
+.tabs {
+  display: flex;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--tab-bg);
+  border: 1px solid var(--border-color);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: var(--tab-bg);
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* light shadow */
+  border-radius: 4px; /* subtle round corners */
+  margin: 2px; /* small gap between buttons */
+}
+
+
+.tab-btn.active {
+  background-color: var(--active-tab-bg);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.action-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 16px;
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.history-container {
+  margin-top: 16px;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.history-list {
+  list-style: none;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: var(--card-bg);
+}
+
+.color-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.font-preview {
+  flex: 1;
+  line-height: 1.2;
+}
+
+.font-name {
+  font-weight: 600;
+}
+
+.font-specs {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.history-text {
+  flex: 1;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 16px 0 8px 0;
+  opacity: 0.7;
+}
+
+/* Add this to your style.css file */
+
+/* Eyedropper styles */
+.web-inspector-eyedropper-active {
+  cursor: crosshair !important;
+}
+
+#web-inspector-magnifier {
+  box-sizing: border-box;
+  transform-origin: center;
+  animation: magnifier-appear 0.2s ease-out;
+}
+
+@keyframes magnifier-appear {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#web-inspector-magnifier-target {
+  z-index: 10;
+}
+
+#web-inspector-color-info {
+  transition: all 0.2s ease;
+}

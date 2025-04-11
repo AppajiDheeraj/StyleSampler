@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Web Inspector",
+  "version": "1.0.0",
+  "description": "A tool for analyzing colors and fonts on any webpage",
+  "permissions": [
+  "activeTab", 
+  "storage", 
+  "scripting", 
+  "tabs", 
+  "tabCapture"
+  ],
+
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
