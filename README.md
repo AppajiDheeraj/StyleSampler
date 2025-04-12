@@ -2,6 +2,8 @@
 
 **Web Inspector** is a lightweight and elegant Chrome Extension that lets you **pick colors from any website** using the EyeDropper API and **analyze fonts** with a single click.
 
+![Demo](WebInspector-ezgif.com-optimize.gif)
+
 ---
 
 ## 🚀 Features
